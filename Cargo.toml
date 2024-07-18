@@ -1,0 +1,21 @@
+[package]
+name = "doing-c-in-rust"
+version = "0.1.0"
+edition = "2021"
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+strip = true      # Automatically strip symbols from the binary.
+opt-level = "z"   # Optimize for size.
+lto = true
+codegen-units = 1
+panic = "abort"
+
+[dependencies]
+libc = "0.2.155"
+libc-stdhandle = "0.1.0"
+
+[build-dependencies]
+bindgen = "0.69.4"
