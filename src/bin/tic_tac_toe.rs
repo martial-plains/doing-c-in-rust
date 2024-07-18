@@ -114,7 +114,7 @@ unsafe fn doublemode() {
         }
 
         if double_table_count == 4 {
-            printf(c"\nDRAW ".as_ptr());
+            printf(c"\nDRAW\n".as_ptr());
             break;
         }
     }
